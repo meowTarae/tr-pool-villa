@@ -1,0 +1,31 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+
+@theme inline {
+  --font-sans: 'Manrope', 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;
+  --font-display: 'Cormorant Garamond', 'Times New Roman', serif;
+  --color-ivory: #f6f3ee;
+  --color-paper: #fbf9f6;
+  --color-ink: #1c1916;
+  --color-stone: #6d675f;
+  --color-line: #e4ddd4;
+  --color-forest: #2c3a32;
+  --color-moss: #3f5348;
+  --color-sand: #c8b8a2;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--color-ivory);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: #d9cfc2;
+}
