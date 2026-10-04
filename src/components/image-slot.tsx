@@ -2,7 +2,10 @@ import { cn } from '@/lib/utils'
 
 interface ImageSlotProps {
   label: string
+  src?: string
   ratio?: 'wide' | 'portrait' | 'hero' | 'map'
+  loading?: 'eager' | 'lazy'
+  fetchPriority?: 'high' | 'low' | 'auto'
   className?: string
 }
 
@@ -13,7 +16,14 @@ const ratioClass: Record<NonNullable<ImageSlotProps['ratio']>, string> = {
   map: 'aspect-[4/3] md:aspect-[16/11]',
 }
 
-export function ImageSlot({ label, ratio = 'wide', className }: ImageSlotProps) {
+export function ImageSlot({
+  label,
+  src,
+  ratio = 'wide',
+  loading = 'lazy',
+  fetchPriority = 'auto',
+  className,
+}: ImageSlotProps) {
   return (
     <figure
       data-image-slot={label}
@@ -23,10 +33,23 @@ export function ImageSlot({ label, ratio = 'wide', className }: ImageSlotProps) 
         className,
       )}
     >
-      <div className="absolute inset-0 bg-[linear-gradient(160deg,#e7e1d8_0%,#cfc6ba_48%,#b7c0b6_100%)]" />
-      <figcaption className="absolute bottom-4 left-4 text-[11px] tracking-[0.18em] uppercase">
-        {label}
-      </figcaption>
+      {src ? (
+        <img
+          src={src}
+          alt={label}
+          loading={loading}
+          fetchPriority={fetchPriority}
+          decoding="async"
+          className="absolute inset-0 size-full object-cover"
+        />
+      ) : (
+        <>
+          <div className="absolute inset-0 bg-[linear-gradient(160deg,#e7e1d8_0%,#cfc6ba_48%,#b7c0b6_100%)]" />
+          <figcaption className="absolute bottom-4 left-4 text-[11px] tracking-[0.18em] uppercase">
+            {label}
+          </figcaption>
+        </>
+      )}
     </figure>
   )
 }

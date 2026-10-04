@@ -7,7 +7,10 @@ export function HeroSection() {
     <section id="hero" className="relative min-h-[100svh] bg-forest text-ivory">
       <ImageSlot
         label="숲속 독채 전경"
+        src="/images/hero.avif"
         ratio="hero"
+        loading="eager"
+        fetchPriority="high"
         className="absolute inset-0 size-full text-ivory/70"
       />
       <div className="absolute inset-0 bg-gradient-to-t from-ink/70 via-ink/20 to-ink/30" />

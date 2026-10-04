@@ -19,6 +19,7 @@ export function FacilitiesSection() {
             >
               <ImageSlot
                 label={facility.imageLabel}
+                src={facility.imageSrc}
                 className={cn(isReversed && 'md:order-2')}
               />
               <div className={cn(isReversed && 'md:order-1')}>

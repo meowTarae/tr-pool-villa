@@ -6,7 +6,7 @@ export interface Room {
   description: string
   note?: string
   features: string[]
-  imageLabels: string[]
+  images: { label: string; src: string }[]
 }
 
 export interface Facility {
@@ -14,6 +14,7 @@ export interface Facility {
   title: string
   description: string
   imageLabel: string
+  imageSrc: string
 }
 
 export interface Review {
@@ -45,7 +46,10 @@ export const rooms: Room[] = [
     description:
       '창 밖으로 나뭇잎이 먼저 닿는 자리입니다. 침실 두 개와 넓은 거실을 두고, 하루의 속도는 숲이 정합니다. 실내 수영장과 불멍, 바비큐는 객실 안에서만 이어집니다.',
     features: ['침실 2', '넓은 거실', '실내 미온수 수영장', '야외 불멍 화로대', '실내 바비큐'],
-    imageLabels: ['T동 외관', 'T동 거실과 숲'],
+    images: [
+      { label: 'T동 외관', src: '/images/room-t-exterior.avif' },
+      { label: 'T동 거실과 숲', src: '/images/room-t-living.avif' },
+    ],
   },
   {
     id: 'r',
@@ -55,7 +59,10 @@ export const rooms: Room[] = [
     description:
       '거실의 긴 창이 숲의 폭을 그대로 들입니다. 앉아 있는 자리와 걷는 자리의 경계가 느슨해지도록, 공간은 낮고 길게 열립니다.',
     features: ['침실 2', '넓은 거실', '실내 미온수 수영장', '야외 불멍 화로대', '실내 바비큐'],
-    imageLabels: ['R동 거실', 'R동 수영장'],
+    images: [
+      { label: 'R동 거실', src: '/images/room-r-living.avif' },
+      { label: 'R동 수영장', src: '/images/room-r-pool.avif' },
+    ],
   },
   {
     id: 'v',
@@ -73,7 +80,10 @@ export const rooms: Room[] = [
       '실내 바비큐',
       '소형 반려견 동반',
     ],
-    imageLabels: ['V동 외관', 'V동 거실'],
+    images: [
+      { label: 'V동 외관', src: '/images/room-v-exterior.avif' },
+      { label: 'V동 거실', src: '/images/room-v-living.avif' },
+    ],
   },
 ]
 
@@ -83,30 +93,35 @@ export const facilities: Facility[] = [
     title: '실내 미온수 수영장',
     description: '각 독채의 수영장은 그 객실만 사용합니다. 물 위에 숲의 그림자가 머물도록 창을 낮게 두었습니다.',
     imageLabel: '실내 미온수 수영장',
+    imageSrc: '/images/facility-pool.avif',
   },
   {
     id: 'fire',
     title: '야외 불멍 화로대',
     description: '해가 내린 뒤의 시간은 화로 앞으로 모입니다. 불빛은 객실 마당 안에서만 번집니다.',
     imageLabel: '야외 불멍 화로대',
+    imageSrc: '/images/facility-fire.avif',
   },
   {
     id: 'grill',
     title: '실내 바비큐',
     description: '날씨와 상관없이 식사의 자리를 지킬 수 있도록, 바비큐는 객실 실내에 두었습니다.',
     imageLabel: '실내 바비큐',
+    imageSrc: '/images/facility-grill.avif',
   },
   {
     id: 'lounge',
     title: '통창 유리 라운지',
     description: '체크인에 맞춰 웰컴 드링크를 준비합니다. 유리 너머로 숲이 보이고, 머무는 첫 숨이 여기서 시작됩니다.',
     imageLabel: '통창 유리 라운지',
+    imageSrc: '/images/facility-lounge.avif',
   },
   {
     id: 'trail',
     title: '프라이빗 산책로',
     description: '객실과 객실 사이를 잇지 않는 길입니다. 발소리만 남기고 돌아오면 됩니다.',
     imageLabel: '프라이빗 산책로',
+    imageSrc: '/images/facility-trail.avif',
   },
 ]
 

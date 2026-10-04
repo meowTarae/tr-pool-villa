@@ -44,8 +44,8 @@ export function RoomsSection() {
 
         <div className="mt-8 grid gap-8 md:grid-cols-[1.1fr_0.9fr] md:gap-14">
           <div className="grid gap-3 sm:grid-cols-2">
-            {activeRoom.imageLabels.map((label) => (
-              <ImageSlot key={label} label={label} />
+            {activeRoom.images.map((image) => (
+              <ImageSlot key={image.src} label={image.label} src={image.src} />
             ))}
           </div>
           <div>

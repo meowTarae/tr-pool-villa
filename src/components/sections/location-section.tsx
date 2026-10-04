@@ -24,7 +24,7 @@ export function LocationSection() {
         </div>
         <div className="grid gap-3">
           <ImageSlot label="지도" ratio="map" />
-          <ImageSlot label="입구로 이어지는 숲길" />
+          <ImageSlot label="입구로 이어지는 숲길" src="/images/entrance-path.avif" />
         </div>
       </div>
     </section>

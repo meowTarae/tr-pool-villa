@@ -20,7 +20,7 @@ export function PrologueSection() {
           </p>
         </div>
       </div>
-      <ImageSlot label="숲으로 열린 창" ratio="portrait" />
+      <ImageSlot label="숲으로 열린 창" src="/images/prologue.avif" ratio="portrait" />
     </section>
   )
 }
