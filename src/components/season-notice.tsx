@@ -17,7 +17,9 @@ export function SeasonNotice() {
         <p className="text-[11px] tracking-[0.22em] text-stone uppercase">Notice</p>
         <DialogTitle className="mt-3">여름 성수기 예약이 열렸습니다</DialogTitle>
         <DialogDescription>
-          숲이 가장 짙은 계절의 자리를 미리 열어 두었습니다. 일정은 야놀자에서 확인하고 이어서 예약해 주세요.
+          숲이 가장 짙은 계절의 자리를 미리 열어 두었습니다.
+          <br />
+          일정은 야놀자에서 확인하고 이어서 예약해 주세요.
         </DialogDescription>
         <div className="mt-8 flex flex-wrap gap-3">
           <Button type="button" onClick={() => undefined}>
