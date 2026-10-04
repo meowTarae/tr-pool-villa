@@ -46,7 +46,7 @@ function DialogContent({
         {...props}
       >
         {children}
-        <DialogPrimitive.Close className="absolute top-4 right-4 inline-flex size-9 items-center justify-center rounded-full text-stone transition-colors hover:bg-black/5 hover:text-ink">
+        <DialogPrimitive.Close className="absolute top-4 right-4 inline-flex size-9 cursor-pointer items-center justify-center rounded-full text-stone transition-colors hover:bg-black/5 hover:text-ink">
           <X className="size-4" />
           <span className="sr-only">닫기</span>
         </DialogPrimitive.Close>

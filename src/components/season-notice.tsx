@@ -22,10 +22,15 @@ export function SeasonNotice() {
           일정은 야놀자에서 확인하고 이어서 예약해 주세요.
         </DialogDescription>
         <div className="mt-8 flex flex-wrap gap-3">
-          <Button type="button" onClick={() => undefined}>
+          <Button type="button" className="cursor-pointer" onClick={() => undefined}>
             야놀자에서 예약
           </Button>
-          <Button type="button" variant="ghost" onClick={() => setIsOpen(false)}>
+          <Button
+            type="button"
+            variant="ghost"
+            className="cursor-pointer border border-line"
+            onClick={() => setIsOpen(false)}
+          >
             둘러보기
           </Button>
         </div>
